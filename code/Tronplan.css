@@ -1,0 +1,913 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #F4F4F4;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #292525;
+    z-index: 100;
+}
+.nav1 {
+    position: relative;
+    width: 1120px;
+    height: 60px;
+    margin: 0 auto;
+    z-index: 100;
+}
+.nav2-box a {
+    display: inline-block;
+    width: 50px;
+    height: 55px;
+    background-color: pink;
+    color: gray;
+}
+.logo-main {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    width: 101px;
+    height: 36px;
+    color: #fff;
+    font-size: 17px;
+}
+img {
+    vertical-align: middle;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.menu {
+    margin-left: 250px;
+}
+/*第一行菜单*/
+.menu>li {
+    float: left;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 60px;
+    padding: 0 15px;
+    text-align: center;
+}
+.menu li a {
+    color: #d1d1d1;
+}
+.menu li a:hover {
+    color: #fff;
+}
+/*鼠标经过背景颜色变深黑*/
+.menu li ul li:hover {
+    background-color: rgb(34, 33, 33);
+}
+/*下拉菜单*/
+.menu ul  {
+    background-color: #292525;
+}
+.menu li ul {
+    position: relative;
+    z-index: 0;
+}
+.menu li a {
+    position: relative;
+    width: 80px;
+    height: 60px;
+    background-color: #292525;
+    z-index: 10;
+    display: inline-block;
+
+}
+.sliding1,.sliding3 {
+    position: absolute;
+    top: -120px;
+}
+.sliding2 {
+    position: absolute;
+    top: -180px;
+}
+/*搜素图标*/
+.search, .search2 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    right: 90px;
+}
+/* 登录按钮*/
+.login-btn1, .login-btn2 {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    color: rgb(95, 95, 95);
+    border: 1px solid rgb(192, 190, 190);
+    cursor: pointer;
+    outline: none;
+    right: 0;
+    border: 0;
+}
+.login-btn:hover {
+    background-color: #fff;
+}
+.shuffling {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+/*标题部分*/
+.title {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 550px;
+    background-image: url(images/计划/title.png);
+    text-align: center;
+}
+.title-tron {
+    position: absolute;
+    width: 450px;
+    height: 80px;
+    left: 50%;
+    margin: 100px 0 0 -225px;
+    background-repeat: no-repeat;
+    background-image: url(images/计划/titletron.png);
+}
+.title-text {
+    width: 530px;
+    height: 30px;
+    left: 50%;
+    margin: 230px 0 0 -275px;
+    color: #fff;
+    position: absolute;
+    font-size: 24px;
+}
+.title-btn {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin: 340px 0 0 -90px;
+} 
+.title-btn button {
+    width: 180px;
+    height: 50px;
+    background-color: #FF6655;
+    color: #fff;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+/*中间主体部分*/
+.middle {
+    position: relative;
+    width: 100%;
+    height: 2870px;
+    background-color: #232323;
+}
+/*悬浮盒子*/
+.middle-text {
+    position: relative;
+    top: -60px;
+    left: 50%;
+    margin-left: -370px;
+    width: 650px;
+    height: 400px;
+    padding: 45px;
+    border-radius: 20px;
+    background-image: url(images/计划/1.png);
+    background-repeat: no-repeat;
+    background-position: 380px 240px;
+    background-color: #333333;
+    box-shadow: 3px 5px 2px 2px rgba(0,0,0,0.1);
+}
+.middle-text1 {
+    text-align: center;
+    font-size: 27px;
+    color: #FF8855;
+    margin-bottom: 50px;
+}
+.middle-text2 {
+    color: #ddd;
+    font-size: 16px;
+}
+.middle-text2 span {
+    color: #FF8855;
+    text-decoration:underline;
+    margin: 0 -3px;
+}
+/*Tron计划获得部分*/
+.text1 {
+    width: 315px;
+    color: #FF8855;
+    font-size: 28px;
+    margin: 40px auto;
+    margin-bottom: 60px;
+}
+.obtain {
+    width: 900px;
+    height: 190px;
+    margin: 0 auto;
+}
+.obtain>div {
+    float: left;
+    margin-right: 25px;
+    width: 200px;
+    height: 190px;
+    text-align: center;
+}
+.obtain-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.obtain-text {
+    color: #ddd;
+    font-size: 14px;
+}
+/*扶持计划案例部分*/
+.text2 {
+    width: 240px;
+    color: #FF8855;
+    font-size: 28px;
+    margin: 40px auto;
+    margin-top: 90px;
+    margin-bottom: 70px;
+}
+.text3 {
+    text-align: center;
+    width: 440px;
+    height: 50px;
+    font-size: 14px;
+    color: #ddd;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.case {
+    width: 1120px;
+    height: 1110px;
+    margin: 0 auto;
+}
+.case-box {
+    float: left;
+    width: 350px;
+    height: 340px;
+    border-radius: 10px;
+    margin: 0 30px 40px 0;
+    overflow: hidden;
+    background-color: #fff;
+    cursor: pointer;
+}
+.case-logo {
+    width: 350px;
+    height: 230px;
+}
+.logo-text {
+    padding: 0 15px;
+}
+.logo-text1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+.logo-text2 {
+    font-size: 14px;
+    color: #444;
+}
+.logo-btn button {
+    background-color: #CCC;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 3px 7px;
+    margin-right: 3px;
+    margin-top: 7px;
+    color: #fff;
+    cursor: pointer;
+}
+.text4 {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FF8855;
+    font-size: 28px;
+    margin: 40px auto;
+    margin-top: 90px;
+    margin-bottom: 70px;
+}
+/*轮播图部分*/
+.shuffling {
+    width: 980px;
+    height: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.shuffling-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 3480px;
+    height: 280px;
+}
+.shuffling-box1 {
+    float: left;
+    width: 480px;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.shuffling-text {
+    width: 440px;
+    height: 150px;
+    padding: 25px 20px 25px 20px;
+    font-size: 14px;
+    line-height: 27px;
+    color: #333;
+    background-color: #fff;
+}
+.shuffling-name {
+    width: 480px;
+    height: 80px;
+    background-color: #EEEEEE;
+    padding: 15px;
+}
+.shuffling-name img {
+    position: relative;
+    top: -10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+/*左右按钮*/
+.arrow-left {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 220px;
+    left: -430px;
+    z-index: 2;
+    cursor: pointer;
+}
+.arrow-right {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 220px;
+    right: -430px;
+    cursor: pointer;
+    z-index: 2;
+}
+.join {
+    position: relative;
+    width: 320px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.join img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.join span {
+    line-height: 40px;
+    font-size: 14px;
+    color: #888;
+    float: right;
+    margin-right: 5px;
+}
+/*合作伙伴部分*/
+.partner {
+    height: 260px;
+    background-color: #F5F5F5;
+    padding-top: 70px;
+}
+.text5 {
+    width: 120px;
+    height: 35px;
+    color: #FF8855;
+    font-size: 28px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+/*页面尾部部分*/
+.footer {
+    height: 130px;
+    background-color: #232222;
+}
+.footer-center{
+    position: relative;
+    width: 1160px;
+    height: 130px;
+    margin: 0 auto;
+} 
+.footer-center>div {
+    display: inline-block;
+}
+/*尾部图标部分*/
+.footer-logo {
+    position: absolute;
+    width: 620px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+}
+.footer-logo img {
+    margin-left: 20px;
+}
+/*尾部文字部分*/
+.footer-text {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    width: 535px;
+    height: 35px;
+}
+.footer-text1 a {
+    font-size: 13px;
+    color: #fff;
+    margin: 0 10px;
+}
+.footer-text1 div {
+    margin: 10px 0 0 185px;
+    font-size: 6px;
+    color: gray;
+}
+/*半透明色背景*/
+.body-shadow {
+    top: 0;
+    width: 100%;
+    height: 4080px;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 50;
+    display: none;
+}
+/*点击搜索按钮出现的搜索界面*/
+.search-face {
+    top: 60px;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 120px;
+    z-index: 100;
+    padding: 30px 0;
+    display: none;
+}
+.search-face>div {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+}
+.search-face input {
+    width: 760px;
+    height: 20px;
+    outline: none;
+    background-color: #F5F5F5;
+    border: 1px solid rgb(228, 224, 224);
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 30px;
+}
+.search-face-btn div {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 10px;
+    color: #8b8585;
+    font-size: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.search-face-btn span {
+    font-size: 16px;
+    color: #635d5d;
+}
+/*点击登录按钮出现的登录界面*/
+.login {
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    top: 50px;
+    z-index: 200;
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    display: none;
+}
+/*登录界面标题*/
+.login-logo {
+    width: 400px;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+}
+.login div {
+    display: inline-block;
+}
+.login-logo div {
+    width: 135px;
+    margin: 0 auto;
+    font-size: 23px;
+}
+.login-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+/*登录界面中间部分*/
+.login-middle {
+    width: 360px;
+    padding: 0 20px;
+}
+/*第一个文本框*/
+.login-middle-box {
+    width: 60px; 
+    height: 15px; 
+    padding: 22px 0 22px 10px;
+    font-size: 14px; 
+    color: gray;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    float: left;
+}
+.firstinput {
+    width: 290px;
+    height: 59px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    float: left;
+    border: none;
+    border-left: none;
+    margin-bottom: 10px;
+}
+/*第二个文本框*/
+.secondinput {
+    width: 249px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+}
+.login-middle-box2 {
+    width: 100px;
+    height: 60px;
+    float: left;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    line-height: 60px;
+    font-size: 15px;
+    color: gray;
+}
+/*第三个盒子*/
+.thirdbox {
+    position: relative;
+    display: inline-block;
+    width: 360px;
+    height: 60px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    color: rgb(94, 89, 89);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.login-middle-box3 {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(235, 230, 211);
+    background-color: #2c2828;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+    /*让文字无法被选中*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.login-middle-box32 {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(235, 230, 211);
+    background-color: #E5E5E5;
+    cursor: move;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    position: absolute;
+    right: 20px;
+    top: 270px;
+    z-index: 150;
+    display: none;
+}
+.login-middle-box31 {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(235, 230, 211);
+    background-color: #E5E5E5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+/*第四个盒子*/
+.login-middle-footer {
+    width: 360px;
+    height: 20px;
+    margin-top: 10px;
+    padding: 30px 0;
+    color: rgb(119, 118, 118);
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+.login-middle-footer button {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    background-color: #f5f5f5;
+}
+.login-btn {
+    margin-left: 10px; 
+    color: #FD281A;
+}
+.login-btn:hover {
+    color: #fff;
+    background-color: #FD281A;
+}
+.register-btn {
+    color: gray;
+}
+.register-btn:hover {
+    color: #000;
+}
+/*登录界面尾部文字*/
+.login-footer-text {
+    width: 360px;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #8e8787;
+}
+/*登录界面尾部图标*/
+.login-footer-logo {
+    width: 360px;
+    padding: 0 20px;
+}
+.login-footer-logo ul li {
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+/*手机号提示框*/
+.login-prompt {
+    position: absolute;
+    top: 155px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 300;
+    display: none;
+}
+.login-prompt-text {
+    width: 400px;
+    height: 140px;
+    line-height: 140px;
+    font-size: 18px;
+}
+.login-prompt-btn {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #FD281A;
+}
+.login-prompt-btn:hover {
+    color: #fff;
+    background-color: #FD281A;
+}
+/*阴影背景*/
+.login-shadow {
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 249;
+    display: none;
+}
+/*点击注册按钮出现的注册界面*/
+.register {
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    top: 10px;
+    z-index: 200;
+    width: 400px;
+    height: 650px;
+    background-color: #fff;
+    display: none;
+}
+/*注册页面标题部分*/
+.register-title {
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 23px;
+    padding: 40px 0;
+}
+/*注册页面主要部分*/
+.register-middle {
+    width: 360px;
+    padding: 0 20px;
+}
+/*第一个文本框*/
+.register-middle-box {
+    width: 60px; 
+    height: 15px; 
+    padding: 22px 0 22px 10px;
+    font-size: 14px; 
+    color: gray;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    float: left;
+}
+.register-input1 {
+    width: 280px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+/*第二三四个文本框*/
+.register-input2,.register-input3,.register-input4 {
+    width: 350px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+/*第五个文本框*/
+.register-input5 {
+    width: 249px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.register-middle-box1 {
+    width: 91px; 
+    height: 15px; 
+    padding: 22px 0 22px 10px;
+    font-size: 14px; 
+    color: gray;
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    float: left;
+    margin-bottom: 20px;
+}
+.agree {
+    font-size: 14px;
+    color: gray;
+}
+.agree a {
+    color: #FD281A;
+}
+.login-return {
+    width: 360px;
+    margin: 20px 0;
+}
+.login-return-btn {
+    font-size: 15px;
+    color: gray;
+}
+.register-register-btn {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    background-color: #f5f5f5;
+    color: #FD281A;
+}
+.register-register-btn:hover {
+    background-color: #FD281A;
+    color: #fff;
+}
+/*注册界面尾部文字部分*/
+.register-footer {
+    width: 360px;
+    font-size: 14px;
+    color: gray;
+    padding: 0 20px;
+}
+.register-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+/*阴影背景*/
+.register-shadow {
+    position: absolute;
+    width: 400px;
+    height: 650px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 249;
+}
+/*注册提示框*/
+.register-prompt {
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 300;
+}
+.register-prompt-text {
+    width: 400px;
+    height: 140px;
+    line-height: 140px;
+    font-size: 18px;
+}
+.register-prompt-btn {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #FD281A;
+}
+.register-prompt-btn:hover {
+    color: #fff;
+    background-color: #FD281A;
+}
+

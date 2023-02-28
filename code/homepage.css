@@ -1,0 +1,947 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #F4F4F4;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #292525;
+    z-index: 100;
+}
+.header2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    z-index: 100;
+}
+.nav1 {
+    position: relative;
+    width: 1120px;
+    height: 60px;
+    margin: 0 auto;
+    z-index: 100;
+}
+.nav2 {
+    position: relative;
+    width: 1120px;
+    height: 60px;
+    margin: 0 auto;
+    z-index: 100;
+    display: none;
+}
+.nav2-box a {
+    display: inline-block;
+    width: 50px;
+    height: 55px;
+    background-color: pink;
+    color: gray;
+}
+.logo-main {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    width: 101px;
+    height: 36px;
+    color: #fff;
+    font-size: 17px;
+}
+img {
+    vertical-align: middle;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.menu {
+    margin-left: 250px;
+}
+/*第一行菜单*/
+.menu>li {
+    float: left;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 60px;
+    padding: 0 15px;
+    text-align: center;
+}
+.menu li a {
+    color: #d1d1d1;
+}
+.menu li a:hover {
+    color: #fff;
+}
+/*鼠标经过背景颜色变深黑*/
+.menu li ul li:hover {
+    background-color: rgb(34, 33, 33);
+}
+/*下拉菜单*/
+.menu ul  {
+    background-color: #292525;
+}
+.menu li ul {
+    position: relative;
+    z-index: 0;
+}
+.menu li a {
+    position: relative;
+    width: 80px;
+    height: 60px;
+    background-color: #292525;
+    z-index: 10;
+    display: inline-block;
+
+}
+.sliding1,.sliding3 {
+    position: absolute;
+    top: -120px;
+}
+.sliding2 {
+    position: absolute;
+    top: -180px;
+}
+/*搜素图标*/
+.search, .search2 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    right: 90px;
+}
+/* 登录按钮*/
+.login-btn1, .login-btn2 {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    color: rgb(95, 95, 95);
+    border: 1px solid rgb(192, 190, 190);
+    cursor: pointer;
+    outline: none;
+    right: 0;
+    border: 0;
+}
+.login-btn:hover {
+    background-color: #fff;
+}
+.shuffling {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+/*半透明色背景*/
+.body-shadow {
+    width: 100%;
+    height: 3500px;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 50;
+    display: none;
+}
+/*点击搜索按钮出现的搜索界面*/
+.search-face {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 120px;
+    z-index: 100;
+    padding: 30px 0;
+    display: none;
+}
+.search-face>div {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+}
+.search-face input {
+    width: 760px;
+    height: 20px;
+    outline: none;
+    background-color: #F5F5F5;
+    border: 1px solid rgb(228, 224, 224);
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 30px;
+}
+.search-face-btn div {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 10px;
+    color: #8b8585;
+    font-size: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.search-face-btn span {
+    font-size: 16px;
+    color: #635d5d;
+}
+/*点击登录按钮出现的登录界面*/
+.login {
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    top: 50px;
+    z-index: 200;
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    display: none;
+}
+/*登录界面标题*/
+.login-logo {
+    width: 400px;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+}
+.login div {
+    display: inline-block;
+}
+.login-logo div {
+    width: 135px;
+    margin: 0 auto;
+    font-size: 23px;
+}
+.login-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+/*登录界面中间部分*/
+.login-middle {
+    width: 360px;
+    padding: 0 20px;
+}
+/*第一个文本框*/
+.login-middle-box {
+    width: 60px; 
+    height: 15px; 
+    padding: 22px 0 22px 10px;
+    font-size: 14px; 
+    color: gray;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    float: left;
+}
+.firstinput {
+    width: 290px;
+    height: 59px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    float: left;
+    border: none;
+    border-left: none;
+    margin-bottom: 10px;
+}
+/*第二个文本框*/
+.secondinput {
+    width: 249px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+}
+.login-middle-box2 {
+    width: 100px;
+    height: 60px;
+    float: left;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    line-height: 60px;
+    font-size: 15px;
+    color: gray;
+}
+/*第三个盒子*/
+.thirdbox {
+    position: relative;
+    display: inline-block;
+    width: 360px;
+    height: 60px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    color: rgb(94, 89, 89);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.login-middle-box3 {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(235, 230, 211);
+    background-color: #2c2828;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+    /*让文字无法被选中*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.login-middle-box32 {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(235, 230, 211);
+    background-color: #E5E5E5;
+    cursor: move;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    position: absolute;
+    right: 20px;
+    top: 270px;
+    z-index: 150;
+    display: none;
+}
+.login-middle-box31 {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 17px;
+    color: rgb(235, 230, 211);
+    background-color: #E5E5E5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+/*第四个盒子*/
+.login-middle-footer {
+    width: 360px;
+    height: 20px;
+    margin-top: 10px;
+    padding: 30px 0;
+    color: rgb(119, 118, 118);
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+.login-middle-footer button {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    background-color: #f5f5f5;
+}
+.login-btn {
+    margin-left: 10px; 
+    color: #FD281A;
+}
+.login-btn:hover {
+    color: #fff;
+    background-color: #FD281A;
+}
+.register-btn {
+    color: gray;
+}
+.register-btn:hover {
+    color: #000;
+}
+/*登录界面尾部文字*/
+.login-footer-text {
+    width: 360px;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #8e8787;
+}
+/*登录界面尾部图标*/
+.login-footer-logo {
+    width: 360px;
+    padding: 0 20px;
+}
+.login-footer-logo ul li {
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+/*手机号提示框*/
+.login-prompt {
+    position: absolute;
+    top: 155px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 300;
+    display: none;
+}
+.login-prompt-text {
+    width: 400px;
+    height: 140px;
+    line-height: 140px;
+    font-size: 18px;
+}
+.login-prompt-btn {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #FD281A;
+}
+.login-prompt-btn:hover {
+    color: #fff;
+    background-color: #FD281A;
+}
+/*阴影背景*/
+.login-shadow {
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 249;
+    display: none;
+}
+/*点击注册按钮出现的注册界面*/
+.register {
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    top: 10px;
+    z-index: 200;
+    width: 400px;
+    height: 650px;
+    background-color: #fff;
+    display: none;
+}
+/*注册页面标题部分*/
+.register-title {
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 23px;
+    padding: 40px 0;
+}
+/*注册页面主要部分*/
+.register-middle {
+    width: 360px;
+    padding: 0 20px;
+}
+/*第一个文本框*/
+.register-middle-box {
+    width: 60px; 
+    height: 15px; 
+    padding: 22px 0 22px 10px;
+    font-size: 14px; 
+    color: gray;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    float: left;
+}
+.register-input1 {
+    width: 280px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+/*第二三四个文本框*/
+.register-input2,.register-input3,.register-input4 {
+    width: 350px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+/*第五个文本框*/
+.register-input5 {
+    width: 249px;
+    height: 60px;
+    background-color: #f5f5f5;
+    color: gray;
+    outline: none;
+    border: none;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.register-middle-box1 {
+    width: 91px; 
+    height: 15px; 
+    padding: 22px 0 22px 10px;
+    font-size: 14px; 
+    color: gray;
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    float: left;
+    margin-bottom: 20px;
+}
+.agree {
+    font-size: 14px;
+    color: gray;
+}
+.agree a {
+    color: #FD281A;
+}
+.login-return {
+    width: 360px;
+    margin: 20px 0;
+}
+.login-return-btn {
+    font-size: 15px;
+    color: gray;
+}
+.register-register-btn {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    background-color: #f5f5f5;
+    color: #FD281A;
+}
+.register-register-btn:hover {
+    background-color: #FD281A;
+    color: #fff;
+}
+/*注册界面尾部文字部分*/
+.register-footer {
+    width: 360px;
+    font-size: 14px;
+    color: gray;
+    padding: 0 20px;
+}
+.register-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+/*阴影背景*/
+.register-shadow {
+    position: absolute;
+    width: 400px;
+    height: 650px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 249;
+}
+/*注册提示框*/
+.register-prompt {
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 300;
+}
+.register-prompt-text {
+    width: 400px;
+    height: 140px;
+    line-height: 140px;
+    font-size: 18px;
+}
+.register-prompt-btn {
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #FD281A;
+}
+.register-prompt-btn:hover {
+    color: #fff;
+    background-color: #FD281A;
+}
+/*右下角笔图标和箭头图标*/
+.pen ,.upward{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pen:hover ,.upward:hover{
+    background-color: rgb(0,0,0,0.3);
+}
+.pen {
+    bottom: 90px;
+    right: 40px;
+}
+.upward {
+    bottom: 40px;
+    right: 40px;
+}
+/*轮播图左右按钮*/
+.arrow-left,.arrow-right {
+    position: absolute;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #F4F4F4;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 20px;
+    color: gray;
+    font-size: 20px;
+    top: 50%;
+    margin-top: -18px;
+    display: none;
+    z-index: 2;
+}
+.arrow-left {
+    left: 115px;
+}
+.arrow-right {
+    left: 1190px;
+}
+.shuffling {
+    width: 1349px;
+    height: 300px;
+    margin: 0 auto;
+}
+.shuffling ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10000px;
+}
+.shuffling ul li {
+    float: left;
+}
+.circle {
+    position: absolute;
+    left: 47%;
+    bottom: 50px;
+}
+/*轮播图底部小圆圈*/
+.circle li {
+    width: 8px;
+    height: 8px;
+    float: left;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.circle-bc {
+    background-color: #fff;
+}
+/*中间四个悬浮盒子*/
+.middle {
+    height: 150px;
+    position: relative;
+    bottom: 30px;
+}
+.box {
+    width: 1200px;
+    height: 165px;
+    margin: 0 auto;
+}
+.box li {
+    margin-left: 25px;
+    display: inline-block;
+    width: 265px;
+    height: 145px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/*鼠标经过图片时图片缓慢放大*/
+.box li img {
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+.box li img:hover {
+    transform: scale(1.1); 
+}
+/*主体部分*/
+.main {
+    position: relative;
+    width: 1150px;
+    margin: 0 auto;
+}
+/*导航栏*/
+.nav {
+    width: 1150px;
+    height: 50px;
+}
+.nav ul li {
+    float: left;
+    line-height: 50px;
+    margin-right: 15px;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #8a8383;
+}
+.nav ul li:hover {
+    color: red;
+}
+.nav-li {
+    border-bottom: 1px solid red;
+}
+/*主体部分左侧推荐部分*/
+.main-left,.main-left2,.main-left3 {
+    position: absolute;
+    margin-top: 20px;
+    width: 800px;
+}
+/*左侧部分中的盒子模型*/
+.left-box {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.left-box>a {
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+.left-box>div {
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    padding: 25px;
+    background-color: #fff;
+}
+
+/*左侧部分的文字区域*/
+.box-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 65px;
+    cursor: pointer;
+}
+.box-logo {
+    width: 320px;
+    height: 25px;
+}
+.box-logo>img ,.box-logo span img{
+    cursor: pointer;
+}
+.box-logo>img {
+    border-radius: 50%;
+}
+/*鼠标经过时盒子内部发生动态变化*/
+.left-box>a>img {
+    transition: all 0.4s;
+}
+.left-box>a>img:hover {
+    transform: scale(1.07);
+}
+.left-box>div {
+    transition: all 0.4s;  
+}
+.left-box>div:hover {
+    transform: translateX(-20px);
+}
+/*派早报标题*/
+.post {
+    width: 740px;
+    height: 340px;
+    position: relative;
+    padding: 30px;
+}
+.title {
+    width: 730px;
+    height: 80px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.title a {
+    color: rgb(255, 106, 0);
+    font-weight: 700;
+}
+.title div {
+    display: inline-block;
+    height: 80px;
+}
+/*派早报内容*/
+.content {
+    position: relative;
+    width: 730px;
+    height: 225px;
+    padding: 30px 0;
+}
+.content>a{
+    display: inline-block;
+    width: 230px;
+    height: 230px;
+}
+.content div {
+    display: inline-block;
+}
+.content>div{
+    position: absolute;
+    width: 520px;
+    height: 230px;
+}
+.content>div div {
+    height: 90px;
+    margin-left: 12px;
+    float: left;
+}
+.content-text {
+    width: 195px; 
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+}
+.content-text:hover {
+    text-decoration:underline;
+}
+/*主体右侧部分*/
+/*顶部两张图片*/
+.main-right {
+    float: right;
+    margin: 20px 25px 0 0;
+    width: 280px;
+} 
+.main-right>a {
+    display: inline-block;
+    width: 280px;
+    height: 130px;
+    margin-bottom: 30px;
+}
+/*一派盒子*/
+.yipai {
+    width: 230px;
+    padding: 25px 25px 0 25px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.yipai>a {
+    display: inline-block;
+    width: 230px;
+    color: #000;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(218, 210, 210);
+}
+.yipai>a div {
+    display: inline-block;
+    width: 150px;
+}
+.yipai-text {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.yipai>a>img {
+    width: 60px;
+    height: 45px;
+    border-radius: 5px;
+    float: right;
+}
+.yipai>a div span {
+    font-size: 12px;
+    font-weight: 700;
+    color: gray;
+}
+.yipai>div>a {
+    color: gray;
+    font-size: 15px;
+}
+.yipai>div>a:hover {
+    color: #000;
+}
+/*Matrix精选盒子*/
+.matrix {
+    width: 230px;
+    padding: 25px 25px 0 25px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.matrix-text {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(218, 210, 210);;
+}
+.matrix img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.matrix a {
+    color: gray;
+    font-size: 15px;
+}
+.matrix a:hover {
+    color: #000;
+}
+/*右侧部分底部*/
+.footer {
+    position: relative;
+    top: 0;
+    width: 280px;
+    padding-top: 25px;
+    border-top: 1px solid rgb(228, 222, 222);
+    margin-top: 40px;
+}
+.footer-icon span {
+    margin: 0 15px;
+    cursor: pointer;
+}
+.footer-middle {
+    margin: 30px 0 20px 15px;
+}
+.footer-middle a {
+    display: inline-block;
+    color: gray;
+    font-size: 12px;
+    margin: 0 35px 15px 0;
+}
+.footer>span {
+    display: inline-block;
+    margin: 0 0 3px 15px;
+    font-size: 12px;
+    color: rgb(175, 170, 170);
+}
